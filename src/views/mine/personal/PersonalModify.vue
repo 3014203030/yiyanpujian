@@ -1,0 +1,163 @@
+<template>
+  <div>
+    <h3 class="basic-title">修改信息</h3>
+    <div class="modify-content">
+      <el-form ref="userForm"
+               :model="userForm"
+               label-width="120px"
+               :rules="userRules">
+        <el-form-item label="用户名" required prop="username">
+          <el-input v-model="userForm.username" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="邮箱" required>
+          <el-input v-model="userForm.email" disabled></el-input>
+        </el-form-item>
+        <el-form-item label="密码" required prop="password">
+          <el-input v-model="userForm.password" type="password" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="地区" required prop="local">
+          <location-selector @val-change="userForm.local = $event"></location-selector>
+        </el-form-item>
+        <el-form-item label="所属单位" required prop="unit">
+          <el-input v-model="userForm.unit" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="科室" required prop="part">
+          <el-input v-model="userForm.part" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="真实姓名" required prop="name">
+          <el-input v-model="userForm.name" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="身份证号" required prop="actureID">
+          <el-input v-model="userForm.actureID" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="手机号" required prop="phone">
+          <el-input v-model="userForm.phone" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="注册地址" required prop="address">
+          <el-input v-model="userForm.address" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="银行卡号" required prop="bankID">
+          <el-input v-model="userForm.bankID" clearable></el-input>
+        </el-form-item>
+        <el-form-item label="是否是医生" style="text-align: left">
+          <el-switch v-model="userForm.ifDOC"></el-switch>
+        </el-form-item>
+        <el-form-item label="行医资格证号码">
+          <el-input v-model="userForm.docID" clearable :disabled="!userForm.ifDOC"></el-input>
+        </el-form-item>
+        <el-form-item label="行医资格证照片">
+          <el-input v-model="userForm.docIDurl" clearable :disabled="!userForm.ifDOC"></el-input>
+        </el-form-item>
+        <el-form-item label="注册类型" required prop="type">
+          <el-select v-model="userForm.type" placeholder="请选择注册类型" style="width: 100%">
+            <el-option label="普通用户" value="1"></el-option>
+            <el-option label="公司用户" value="5"></el-option>
+            <el-option label="项目管理人" value="3"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-button type="primary" @click="submitForm('userForm')">提交</el-button>
+      </el-form>
+    </div>
+  </div>
+</template>
+
+<script>
+  import LocationSelector from "@/components/common/LocationSelector";
+
+  export default {
+    name: "PersonalModify",
+    components: {
+      LocationSelector
+    },
+    data() {
+      return {
+        userForm: {
+          username: this.$store.state.userInfo.username,
+          email: '',
+          password: '',
+          local: '',
+          region: '',
+          unit: '',
+          part: '',
+          name: '',
+          actureID: '',
+          phone: '',
+          address: '',
+          bankID: '',
+          ifDOC: false,
+          docID: '',
+          docIDurl: '',
+          type: ''
+        },
+        userRules: {
+          username: [
+            { required: true, message: '请输入用户名', trigger: 'blur' }
+          ],
+          password: [
+            { required: true, message: '请输入密码', trigger: 'blur' }
+          ],
+          local: [
+            { required: true, message: '地址信息不完整', trigger: 'change' }
+          ],
+          region: [
+            { required: true, message: '请输入社区', trigger: 'blur' }
+          ],
+          unit: [
+            { required: true, message: '请输入所属单位', trigger: 'blur' }
+          ],
+          part: [
+            { required: true, message: '请输入科室', trigger: 'blur' }
+          ],
+          name: [
+            { required: true, message: '请输入真实姓名', trigger: 'blur' }
+          ],
+          actureID: [
+            { required: true, message: '请输入身份证号', trigger: 'blur' }
+          ],
+          phone: [
+            { required: true, message: '请输入手机号', trigger: 'blur' }
+          ],
+          address: [
+            { required: true, message: '请输入地址', trigger: 'blur' }
+          ],
+          bankID: [
+            { required: true, message: '请输入银行卡号', trigger: 'blur' }
+          ],
+          type: [
+            { required: true, message: '请输入注册类型', trigger: 'change' }
+          ]
+          // 其他表单验证
+        }
+      }
+    },
+    methods: {
+      async startModify() {
+        let res = await this.$http.userModify(this.userForm);
+        if (res.code === this.$http.SUCC_CODE) {
+          this.$message.success('修改成功');
+          await this.$router.push({name: 'MyInfo'})
+        } else {
+          this.$message.error(res.msg)
+        }
+      },
+      submitForm(formName) {
+        this.$refs[formName].validate((valid) => {
+          if (valid) {
+            this.startModify();
+          } else {
+            console.log('error submit!!');
+            return false;
+          }
+        });
+      },
+    }
+  }
+</script>
+
+<style lang="scss">
+  .modify-content {
+    text-align: center;
+    width: 80%;
+    margin: 4rem auto 0;
+  }
+</style>

@@ -1,0 +1,78 @@
+@import "./base.css";
+
+/* 这个项目从开始规划的时候就跑偏了，毫无营养，约等于写了一万遍HelloWorld */
+/* 主题色 */
+:root {
+  /*scoped --color-background-gray: rgb(246, 246, 246);*/
+  --color-background-gray: #ecf0f5;
+
+  --color-background: rgb(33, 167, 156);
+  --color-background-deep: rgb(24, 118, 110);
+
+  --color-text-title: rgb(11, 63, 59);
+  --color-text: rgb(120, 134, 150);
+
+  --color-text-highlight: rgba(255, 227, 94);
+
+  --font-size: .9rem;
+
+  --box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  /*scoped --box-shadow: rgba(0,0,0,.2) 0 1px 5px 0px;*/
+
+  --max-width: 1280px;
+}
+
+html,
+body {
+  min-width: 760px;
+}
+
+#app .el-scrollbar__wrap {
+  overflow-x: hidden;
+}
+/* 消除横向的scroll */
+
+.basic-container {
+  padding: 0 4%;
+}
+.sticky-container {
+  position: -webkit-sticky;
+  /*position: fixed !important;*/
+  position: sticky !important;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+.fixed-container {
+  position: fixed !important;
+  z-index: 99;
+}
+.basic-title {
+  margin-bottom: .5rem;
+  color: var(--color-background);
+  padding-left: 1rem;
+  border-left: 5px solid var(--color-background);
+}
+
+.basic-title-no-bottom {
+  color: var(--color-background);
+  padding-left: 1rem;
+  border-left: 5px solid var(--color-background);
+}
+
+.basic-link {
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+.basic-link:hover {
+  text-decoration: underline;
+}
+
+.gray-background {
+  background: var(--color-background-gray);
+}
+
+.green-background {
+  background: var(--color-background);
+}
