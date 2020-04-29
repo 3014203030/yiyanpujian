@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--单页的文章-->
-    <div class="basic-container">
+    <div class="basic-container jasonhide">
       <div class="article-page-box left">
         <h3 class="basic-title flex-auto">文章详情</h3>
         <div class="article-page-content" v-if="articleMsg">
@@ -83,8 +83,7 @@
                     <div class="entry-wrapper">
                       <div class="entry-content u-text-format u-clearfix">
                       </div>
-                      <div id="content" class="x_detail1 article__detail" style="font-size: 14px;text-align: left"  v-html="HtmlContent">
-
+                      <div id="content" class="x_detail1 article__detail" style="font-size: 14px;text-align: left"  v-html="articleMsg.fullContent">
                       </div>
                       <div class="entry-tags">
                         <a href="#">

@@ -4,7 +4,7 @@
     <div class="main-article-box" @click="hrefClick(mainArticle.uuid)">
       <el-image class="flex-shrink-0"
                 style="width: 100%;"
-                :src="mainArticle.picURL | fullPicUrl"
+                :src="consensus_pic"
                 fit="cover"></el-image>
       <div class="main-article-text flex-auto">
         <h3 class="main-article-title ellipsis center">{{ mainArticle.title }}</h3>
@@ -30,6 +30,7 @@
 </template>
 
 <script>
+  import global from './../../../Global';
   export default {
     name: "Consensus",
     data() {
@@ -40,7 +41,8 @@
           fullContent: "",
           title: "",
           uuid: ""
-        }
+        },
+        consensus_pic: global.consensus_pic
       }
     },
     methods: {

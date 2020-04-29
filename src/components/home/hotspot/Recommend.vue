@@ -9,17 +9,19 @@
           <span>{{ index + 1 }}</span> / {{ carousel.length }}
         </div>
       </div>
-      <el-image :src="item.picURL | fullPicUrl" style="width: 100%; height: 100%" fit="cover"></el-image>
+      <el-image :src="carousel_picList[index]" style="width: 100%; height: 100%" fit="cover"></el-image>
 <!--scoped      <el-image :src="item.picURL | fullPicUrl" style="width: 100%; height: 100%" fit="cover"></el-image>-->
     </el-carousel-item>
   </el-carousel>
 </template>
 
 <script>
+  import global from '../../../Global';
   export default {
     name: "Recommend",
     data() {
       return {
+        carousel_picList: global.carousel_picList,
         carousel: []
       }
     },
