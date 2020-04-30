@@ -1,11 +1,11 @@
 <template>
   <div class="category-box">
     <div class="entry-thumbnails-17codesign">
-      <h3 class="entry-title-17codesign">广告标题</h3>
-      <span class="description-17codesign"><p>广告内容广告内容广告内容，广告内容</p></span>
+      <h3 class="entry-title-17codesign">{{title}}</h3>
+      <span class="description-17codesign"><p>{{desc}}</p></span>
       <div class="group-17codesign">
         <img class="lazyloaded"
-             src="http://img1.dxycdn.com/2019/1220/920/3386172806286305131-12.png"
+             :src="img"
         />
       </div>
     </div>
@@ -15,7 +15,21 @@
 
 <script>
   export default {
-    name: "AdBox"
+    name: "AdBox",
+    props: {
+      title: {
+        type: String,
+        default: '广告标题'
+      },
+      desc: {
+        type: String,
+        default: '点击查看详情>>'
+      },
+      img: {
+        type: String,
+        default: 'http://img1.dxycdn.com/2020/0417/088/3408242042617900513-12.jpg'
+      }
+    }
   }
 </script>
 

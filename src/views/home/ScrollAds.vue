@@ -2,13 +2,13 @@
   <div class="et_pb_extra_module">
     <el-row :gutter="20">
       <el-col :xs="12" :sm="8">
-        <AdBox />
+        <AdBox img="http://img1.dxycdn.com/2019/0505/902/3343747965445052554-12.jpg" title="内部推荐专区" />
       </el-col>
       <el-col :xs="12" :sm="8">
-        <AdBox />
+        <AdBox img="http://img1.dxycdn.com/2020/0417/088/3408242042617900513-12.jpg" title="医院推广专区" />
       </el-col>
       <el-col :xs="12" :sm="8">
-        <AdBox />
+        <AdBox img="http://img.dxycdn.com/dq/201701/gg_20170116_151123_682.png" title="企业招聘专区" />
       </el-col>
     </el-row>
   </div>

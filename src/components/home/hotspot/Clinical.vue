@@ -11,7 +11,6 @@
         <div class="post-meta">
           <p>{{ typeof(mainArticle.label) !== "string" ? '' : mainArticle.label.replace("[","").replace("]","").replace("'","").replace("'","") }} | {{ mainArticle.part }}</p>
         </div>
-        <p class="main-article-content ellipsis left">{{ mainArticle.fullContent }}</p>
       </div>
     </div>
     <el-scrollbar style="height:100%;padding:0 1rem 0 1rem">

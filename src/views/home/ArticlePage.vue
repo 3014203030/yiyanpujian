@@ -138,7 +138,7 @@
                 <div id="cao_widget_pay-2" class="widget widget-pay">
                   <div class="pay--content">
                     <div class="info">
-                      <div class="price"><font>￥0.19</font></div>
+                      <div class="price"><font>￥{{(Math.random()*100).toFixed(2)}}</font></div>
                       <div class="pay--rateinfo"><b class="desc"><span class="type_icont_2"><i
                         class="fa fa-diamond"></i> 已加入原创打赏计划</span></b></div>
                     </div>

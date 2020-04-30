@@ -12,13 +12,13 @@
             </div>
             <div class="list-content" >
               <div class="list-body" >
-                <a class="list-title" href="#">
-                  广告位1 </a>
+                <a target="_blank" class="list-title" href="http://news.cctv.com/2020/04/29/ARTIxX78BrJ3hJz7EaOTYeV7200429.shtml">
+                  八部门发文明确医疗美容广告属医疗广告 </a>
                 <div class="entry-footer">
                   <ul class="post-meta-box">
 
                     <li class="meta-date">
-                      <time><i class="el-icon-time"></i> 2019-06-20</time>
+                      <time><i class="el-icon-time"></i> 2020-04-30</time>
                     </li>
                     <li class="meta-views"><span><i class="el-icon-thumb"></i> 12.48K</span></li>
                     <li class="meta-comment"><span><i class="el-icon-chat-dot-square"></i> 0</span></li>
@@ -43,13 +43,13 @@
                   <div class="list-content">
                     <div class="list-body">
                       <div class="mt-auto">
-                        <a class="list-title" href="#">
-                          广告位2
+                        <a target="_blank" class="list-title" href="http://news.cctv.com/2020/04/28/ARTIsErSAPG1AZTB4ubgPmp9200428.shtml">
+                          海关总署通报违法医疗物资
                         </a>
                         <div class="entry-footer">
                           <ul class="post-meta-box">
                             <li class="meta-date">
-                              <time><i class="el-icon-time"></i> 2019-06-13</time>
+                              <time><i class="el-icon-time"></i> 2020-04-30</time>
                             </li>
                             <li class="meta-views"><span><i class="el-icon-thumb"></i> 1.92K</span></li>
                             <li class="meta-comment"><span><i class="el-icon-chat-dot-square"></i> 0</span></li>
@@ -71,8 +71,8 @@
                   <div class="list-content">
                     <div class="list-body">
                       <div class="mt-auto">
-                        <a class="list-title" href="#">
-                          广告位3
+                        <a target="_blank" class="list-title" href="http://news.cctv.com/2020/04/30/ARTIc6DveFJAfqwMkcXL4xuk200430.shtml">
+                          疫情期间的央企
                         </a>
                         <div class="entry-footer">
                           <ul class="post-meta-box">
@@ -100,13 +100,13 @@
                   <div class="list-content">
                     <div class="list-body">
                       <div class="mt-auto">
-                        <a class="list-title" href="#">
-                          广告位4
+                        <a target="_blank" class="list-title" href="http://news.cctv.com/2020/04/28/ARTIXzAcLIsjCsqdXKkTuIm2200428.shtml">
+                          “舒适”号医疗船
                         </a>
                         <div class="entry-footer">
                           <ul class="post-meta-box">
                             <li class="meta-date">
-                              <time><i class="el-icon-time"></i> 2020-04-19</time>
+                              <time><i class="el-icon-time"></i> 2020-04-29</time>
                             </li>
                             <li class="meta-views"><span><i class="el-icon-thumb"></i> 2.71K</span></li>
                             <li class="meta-comment"><span><i class="el-icon-chat-dot-square"></i> 1</span></li>
@@ -128,8 +128,8 @@
                   <div class="list-content">
                     <div class="list-body">
                       <div class="mt-auto">
-                        <a class="list-title" href="#">
-                          广告位5
+                        <a target="_blank" class="list-title" href="http://news.cctv.com/2020/04/30/ARTI6mzoIpN0AodxT9Z6nC5w200430.shtml">
+                          万名医生进社区
                         </a>
                         <div class="entry-footer">
                           <ul class="post-meta-box">
