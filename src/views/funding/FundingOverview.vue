@@ -124,8 +124,6 @@
       // 仿佛自己是个弱智
       async initUserAndManagerList() {
         let res = await axios.post('/api/doctor/user/serachList3', {
-          // 前端并不知道，也不想知道这个为什么拼错
-          // 而且为什么这里又用2和3表示用户和管理员
           username: this.$store.state.userInfo.username
         });
         console.log(res.data.data);

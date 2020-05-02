@@ -4,8 +4,10 @@
       <h3 class="entry-title-17codesign">{{title}}</h3>
       <span class="description-17codesign"><p>{{desc}}</p></span>
       <div class="group-17codesign">
-        <img class="lazyloaded"
-             :src="img"
+        <el-image class="lazyloaded"
+                  style="width: 100%"
+                  :src="img"
+                  :fit="cover"
         />
       </div>
     </div>

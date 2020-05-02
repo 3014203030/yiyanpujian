@@ -67,6 +67,7 @@ export const FUNDING_API = {
   },
 
   // 我是智障
+
   recordingAdd: {
     method: 'post',
     url: '/doctor/recording/add'

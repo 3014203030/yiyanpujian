@@ -39,5 +39,11 @@ export const COMMON_API = {
   searchUnit: {
     method: 'post',
     url: '/doctor/userFea/searchUnit'
+  },
+
+
+  updateArticleData: {
+    method: 'post',
+    url: '/doctor/article/updatedata'
   }
 }

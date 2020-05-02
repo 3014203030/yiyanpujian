@@ -15,7 +15,6 @@
 </template>
 
 <script>
-  //banners: [ 'http://img1.dxycdn.com/2019/1220/920/3386172806286305131-12.png', 'http://img1.dxycdn.com/2019/1216/345/3385430421189410482-12.png', 'http://img1.dxycdn.com/2020/0323/372/3403638771831864776-12.jpg' ],
   import AdBox from "../../components/home/AdBox/AdBox";
   export default {
     name: 'ScrollAds',

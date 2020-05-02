@@ -75,7 +75,7 @@
       },
       async initPersonalInfo() {
         let res = await this.$http.getUser({
-          token: this.$store.state.userInfo.token
+          username: this.$store.state.userInfo.username
         });
         console.log('-------------用户信息----------');
         console.log(res);

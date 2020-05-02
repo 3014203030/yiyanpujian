@@ -1,11 +1,11 @@
 <template>
   <div>
     <div v-if="$store.state.userInfo.username === ''">
-      <el-link :underline="false" type="primary" @click="$router.push({name: 'Login'})"><i class="el-icon-user"></i> 登 录</el-link>
+      <el-link type="primary" @click="$router.push({name: 'Login'})"><i class="el-icon-user"></i> 登 录</el-link>
       <span style="padding: 0 .5rem"> | </span>
-      <el-link :underline="false" type="primary" @click="$router.push({name: 'LoginManager'})"><i class="el-icon-user-solid"></i> 经费管理员登录</el-link>
+      <el-link type="primary" @click="$router.push({name: 'LoginManager'})"><i class="el-icon-user"></i> 经费审核入口</el-link>
       <span style="padding: 0 .5rem"> | </span>
-      <el-link :underline="false" type="primary" @click="$router.push({name: 'SignUp'})"> 注 册</el-link>
+      <el-link type="primary" @click="$router.push({name: 'SignUp'})"> 注 册</el-link>
     </div>
     <div v-else>
       <el-dropdown :hide-on-click="false" @command="handleCommand">
@@ -19,13 +19,19 @@
           <el-dropdown-item command="Account" v-if="$store.state.role === 'user'">
             <drop-down>我的报酬</drop-down>
           </el-dropdown-item>
-          <el-dropdown-item command="Funding" v-if="$store.state.role === 'company'">
+          <el-dropdown-item command="Funding" v-if="$store.state.role === 'company' || $store.state.role === 'business'">
             <drop-down>我的资金</drop-down>
           </el-dropdown-item>
           <el-dropdown-item command="FundingManage" v-if="$store.state.role === 'manager'">
             <drop-down>团队资金管理</drop-down>
           </el-dropdown-item>
-          <el-dropdown-item command="News" disabled>
+          <el-dropdown-item command="LoginManager" v-if="$store.state.role === 'company'">
+            <drop-down>资金审核入口</drop-down>
+          </el-dropdown-item>
+          <el-dropdown-item command="ToAffair" v-if="$store.state.role === 'manager' || $store.state.role === 'company' || $store.state.role === 'business'">
+            <drop-down>待审核</drop-down>
+          </el-dropdown-item>
+          <el-dropdown-item command="News">
             <drop-down type="new">站内信</drop-down>
           </el-dropdown-item>
         </el-dropdown-menu>
@@ -62,5 +68,6 @@
   }
 </script>
 
-<style scoped>
+<style>
+
 </style>

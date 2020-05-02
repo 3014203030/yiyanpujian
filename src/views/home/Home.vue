@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-<!--    <advertisement-side></advertisement-side>-->
-    <global-header class="sticky-container" />
+    <advertisement-side></advertisement-side>
+    <global-header></global-header>
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  import AdvertisementSide from "@/views/AdvertisementSide";
+  import AdvertisementSide from "@/views/web/AdvertisementSide";
   import GlobalHeader from "@/views/global/GlobalHeader";
   import GlobalFooter from "@/views/global/GlobalFooter";
 

@@ -7,14 +7,14 @@
         <div class="divider" style="margin-bottom: 2rem"></div>
         <el-form ref="loginForm"
                  :model="loginForm"
-                 label-width="60px"
+                 label-width="80px"
                  label-position="left"
                  :rules="rules">
 <!--        <el-form ref="loginForm"-->
 <!--                 :model="loginForm"-->
 <!--                 label-width="80px"-->
 <!--                 label-position="right">-->
-          <el-form-item label="邮箱" required prop="name">
+          <el-form-item label="用户名" required prop="name">
             <el-input v-model="loginForm.name" clearable></el-input>
           </el-form-item>
           <el-form-item label="密码" required prop="password">
@@ -40,7 +40,7 @@
         },
         rules: {
           name: [
-            { required: true, message: '请输入邮箱', trigger: 'blur' }
+            { required: true, message: '请输入用户名', trigger: 'blur' }
           ],
           password: [
             { required: true, message: '请输入密码', trigger: 'blur' }
@@ -61,7 +61,7 @@
       },
       async startLogin() {
         let res = await this.$http.login({
-          email: this.loginForm.name,
+          username: this.loginForm.name,
           password: this.loginForm.password
         });
         if (res.code === this.$http.SUCC_CODE) {

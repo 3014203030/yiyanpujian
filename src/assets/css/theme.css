@@ -18,13 +18,15 @@
 
   --box-shadow: 0 1px 3px rgba(0,0,0,.1);
   /*scoped --box-shadow: rgba(0,0,0,.2) 0 1px 5px 0px;*/
-
   --max-width: 1280px;
+
 }
 
 html,
 body {
+  /*scoped min-width: 1200px;*/
   min-width: 760px;
+  background-color: var(--color-background-gray);
 }
 
 #app .el-scrollbar__wrap {
@@ -33,6 +35,7 @@ body {
 /* 消除横向的scroll */
 
 .basic-container {
+  /*scoped padding: 0 7%;*/
   padding: 0 4%;
 }
 .sticky-container {
@@ -47,6 +50,7 @@ body {
   position: fixed !important;
   z-index: 99;
 }
+
 .basic-title {
   margin-bottom: .5rem;
   color: var(--color-background);

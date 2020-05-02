@@ -27,6 +27,9 @@ export default new Vuex.Store({
         case '8':
           state.role = 'expenseManager';
           break;
+        case '6':
+          state.role = 'business';
+          break;
         default:
           state.role = 'user'
       }

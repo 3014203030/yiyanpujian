@@ -2,17 +2,17 @@ export const MENU_MAPPING = [
   {
     name: '我的信息',
     icon: 'el-icon-user',
-    roles: ['user', 'manager', 'company'],
+    roles: ['user', 'manager', 'company', 'business'],
     children: [
       {
         name: '基本资料',
         path: '/mine/myInfo',
-        roles: ['user', 'manager', 'company']
+        roles: ['user', 'manager', 'company', 'business']
       },
       {
         name: '修改信息',
         path: '/mine/myInfoModify',
-        roles: ['user', 'manager', 'company']
+        roles: ['user', 'manager', 'company', 'business']
       }
     ]
   },
@@ -36,22 +36,27 @@ export const MENU_MAPPING = [
   {
     name: '我的项目',
     icon: 'el-icon-coin',
-    roles: ['user', 'manager', 'company'],
+    roles: ['user', 'manager', 'company', 'business'],
     children: [
+      {
+        name: '业务申请',
+        path: '/mine/applyForBusiness',
+        roles: ['business']
+      },
       {
         name: '已发起项目',
         path: '/mine/myInitiated',
-        roles: ['company']
+        roles: ['company', 'business']
       },
       {
         name: '新增项目',
         path: '/mine/addProject',
-        roles: ['company']
+        roles: ['company', 'business']
       },
       {
         name: '管理中项目',
         path: '/mine/myManaged',
-        roles: ['manager']
+        roles: ['manager', 'business']
       },
       {
         name: '参与中项目',
@@ -86,6 +91,18 @@ export const MENU_MAPPING = [
   {
     name: '健康半径',
     icon: 'el-icon-bangzhu',
+    roles: ['user'],
+    children: [
+      {
+        name: '敬请期待',
+        path: '',
+        roles: ['user']
+      }
+    ]
+  },
+  {
+    name: '培训直播',
+    icon: 'el-icon-video-camera',
     roles: ['user'],
     children: [
       {

@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import AdvertisementFloat from "@/views/AdvertisementFloat";
+  import AdvertisementFloat from "@/views/web/AdvertisementFloat";
 
   export default {
     name: 'App',

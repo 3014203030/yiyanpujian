@@ -44,7 +44,7 @@ const routes = [
     ]
   },
   {
-    path: '/login',
+    path: '/newLogin',
     name: 'Login',
     component: () => import('@/views/SignIn'),
     meta: {
@@ -62,7 +62,7 @@ const routes = [
   {
     path: '/signUp',
     name: 'SignUp',
-    component: () => import('@/views/SignUp'),
+    component: () => import('@/views/v3/newLogin/SignUp'),
     meta: {
       title: '用户注册'
     }
@@ -71,6 +71,14 @@ const routes = [
     path: '/mine',
     component: () => import('@/views/mine/MineMainPage'),
     children: [
+      {
+        path: 'applyForBusiness',
+        name: 'ApplyForBusiness',
+        component: () => import('@/views/v3/ApplyForBusiness'),
+        meta: {
+          title: '业务申请'
+        }
+      },
       {
         path: '',
         name: 'Mine',
@@ -274,7 +282,7 @@ const routes = [
   {
     path: '/webManager',
     name: 'WebManager',
-    component: () => import('@/views/WebManager'),
+    component: () => import('@/views/web/WebManager'),
     meta: {
       title: '网站管理'
     }
@@ -282,11 +290,24 @@ const routes = [
   {
     path: '/expenseManager',
     name: 'ExpenseManager',
-    component: () => import('@/views/ExpenseManager'),
+    component: () => import('@/views/web/ExpenseManager'),
     meta: {
       title: '经费管理'
     }
   },
+  {
+    path: '/toAffair',
+    name: 'ToAffair',
+    component: () => import('@/views/v3/check/ToAffair')
+  },
+  {
+    path: '/newTips',
+    name: 'News',
+    component: () => import('@/views/v3/NewTips'),
+    meta: {
+      title: '站内信'
+    }
+  }
 ]
 
 const router = new VueRouter({

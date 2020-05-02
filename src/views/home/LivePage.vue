@@ -16,15 +16,17 @@
             <el-link type="primary" :href="liveInfo.sourceURL">{{ liveInfo.sourceURL }}</el-link>
           </div>
           <div class="flex">
-            <div class="secondary-text flex-auto flex">
-              <p>浏览量：{{ liveInfo.views }}</p>
-              <p><span class="tab"></span></p>
-              <p>点赞量：{{ liveInfo.likes }}</p>
-              <p><span class="tab"></span></p>
-              <p>下载量：{{ liveInfo.download }}</p>
-              <p><span class="tab"></span></p>
-              <p>收藏量：{{ liveInfo.berecord }}</p>
-            </div>
+<!--            <like-collection class="flex-auto" :info="liveInfo" :uuid="liveInfo.uuid"></like-collection>-->
+            <like-collection class="flex-auto" :uuid="liveInfo.uuid"></like-collection>
+<!--            <div class="secondary-text flex-auto flex">-->
+<!--              <p>浏览量：{{ liveInfo.views }}</p>-->
+<!--              <p><span class="tab"></span></p>-->
+<!--              <p>点赞量：{{ liveInfo.likes }}</p>-->
+<!--              <p><span class="tab"></span></p>-->
+<!--              <p>下载量：{{ liveInfo.download }}</p>-->
+<!--              <p><span class="tab"></span></p>-->
+<!--              <p>收藏量：{{ liveInfo.berecord }}</p>-->
+<!--            </div>-->
             <div class="flex">
               <el-tag effect="dark">{{ liveInfo.label }}</el-tag>
               <span class="tab"></span>
@@ -51,12 +53,14 @@
 <script>
   import LiveCardSide from "@/components/home/live/LiveCardSide";
   import MyVideoPlayer from "@/components/common/MyVideoPlayer";
+  import LikeCollection from "@/components/common/LikeCollection";
 
   export default {
     name: "LivePage",
     components: {
       LiveCardSide,
-      MyVideoPlayer
+      MyVideoPlayer,
+      LikeCollection
     },
     data() {
       return {

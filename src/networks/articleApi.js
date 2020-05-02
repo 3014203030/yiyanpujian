@@ -18,7 +18,6 @@ export const ARTICLE_API = {
   articleSearch: {
     method: 'post',
     url: '/doctor/article/search'
-    //url: 'http://rap2.taobao.org:38080/app/mock/251290/api/doctor/article/search'
   },
   // 查询筛选值接口 ----------------------------------------------------
   articleFilter: {

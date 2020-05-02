@@ -12,14 +12,6 @@ module.exports = {
       'components': '@/components',
       'views': '@/views',
       'common': '@/common',
-      'jquery': 'jquery'
     }
-  },
-  // 增加一个plugins
-  plugins: [
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery"
-    })
-  ],
+  }
 };
